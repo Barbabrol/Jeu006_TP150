@@ -1,4 +1,4 @@
-// ==================== script.js - 60 VERBES ====================
+// ==================== script.js - 150 VERBES ====================
 const verbs = [
   {base: "be", past: "was/were", pp: "been", fr: "être", mastery: 0},
   {base: "have", past: "had", pp: "had", fr: "avoir", mastery: 0},
@@ -21,7 +21,7 @@ const verbs = [
   {base: "feel", past: "felt", pp: "felt", fr: "ressentir", mastery: 0},
   {base: "put", past: "put", pp: "put", fr: "mettre", mastery: 0},
   
-  // 21 à 40
+  // 21-40
   {base: "bring", past: "brought", pp: "brought", fr: "apporter", mastery: 0},
   {base: "begin", past: "began", pp: "begun", fr: "commencer", mastery: 0},
   {base: "keep", past: "kept", pp: "kept", fr: "garder", mastery: 0},
@@ -43,12 +43,12 @@ const verbs = [
   {base: "grow", past: "grew", pp: "grown", fr: "grandir", mastery: 0},
   {base: "lose", past: "lost", pp: "lost", fr: "perdre", mastery: 0},
   
-  // 41 à 60
+  // 41-60
   {base: "fall", past: "fell", pp: "fallen", fr: "tomber", mastery: 0},
   {base: "send", past: "sent", pp: "sent", fr: "envoyer", mastery: 0},
   {base: "build", past: "built", pp: "built", fr: "construire", mastery: 0},
   {base: "understand", past: "understood", pp: "understood", fr: "comprendre", mastery: 0},
-  {base: "draw", past: "drew", pp: "drawn", fr: "dessiner", mastery: 0},
+  {base: "draw", past: "drawe", pp: "drawn", fr: "dessiner", mastery: 0},
   {base: "buy", past: "bought", pp: "bought", fr: "acheter", mastery: 0},
   {base: "choose", past: "chose", pp: "chosen", fr: "choisir", mastery: 0},
   {base: "drive", past: "drove", pp: "driven", fr: "conduire", mastery: 0},
@@ -63,7 +63,90 @@ const verbs = [
   {base: "swim", past: "swam", pp: "swum", fr: "nager", mastery: 0},
   {base: "teach", past: "taught", pp: "taught", fr: "enseigner", mastery: 0},
   {base: "win", past: "won", pp: "won", fr: "gagner", mastery: 0},
-  {base: "break", past: "broke", pp: "broken", fr: "casser", mastery: 0}
+  {base: "break", past: "broke", pp: "broken", fr: "casser", mastery: 0},
+  
+  // 61-80
+  {base: "catch", past: "caught", pp: "caught", fr: "attraper", mastery: 0},
+  {base: "cut", past: "cut", pp: "cut", fr: "couper", mastery: 0},
+  {base: "hit", past: "hit", pp: "hit", fr: "frapper", mastery: 0},
+  {base: "hurt", past: "hurt", pp: "hurt", fr: "blesser", mastery: 0},
+  {base: "lay", past: "laid", pp: "laid", fr: "poser", mastery: 0},
+  {base: "lend", past: "lent", pp: "lent", fr: "prêter", mastery: 0},
+  {base: "ring", past: "rang", pp: "rung", fr: "sonner", mastery: 0},
+  {base: "rise", past: "rose", pp: "risen", fr: "se lever", mastery: 0},
+  {base: "shake", past: "shook", pp: "shaken", fr: "secouer", mastery: 0},
+  {base: "shine", past: "shone", pp: "shone", fr: "briller", mastery: 0},
+  {base: "shoot", past: "shot", pp: "shot", fr: "tirer", mastery: 0},
+  {base: "spend", past: "spent", pp: "spent", fr: "dépenser", mastery: 0},
+  {base: "steal", past: "stole", pp: "stolen", fr: "voler", mastery: 0},
+  {base: "stick", past: "stuck", pp: "stuck", fr: "coller", mastery: 0},
+  {base: "strike", past: "struck", pp: "struck", fr: "frapper", mastery: 0},
+  {base: "sweep", past: "swept", pp: "swept", fr: "balayer", mastery: 0},
+  {base: "throw", past: "threw", pp: "thrown", fr: "jeter", mastery: 0},
+  {base: "wear", past: "wore", pp: "worn", fr: "porter (vêtements)", mastery: 0},
+  {base: "fight", past: "fought", pp: "fought", fr: "combattre", mastery: 0},
+  {base: "hide", past: "hid", pp: "hidden", fr: "cacher", mastery: 0},
+  
+  // 81-100
+  {base: "bite", past: "bit", pp: "bitten", fr: "mordre", mastery: 0},
+  {base: "blow", past: "blew", pp: "blown", fr: "souffler", mastery: 0},
+  {base: "burn", past: "burnt/burned", pp: "burnt/burned", fr: "brûler", mastery: 0},
+  {base: "cost", past: "cost", pp: "cost", fr: "coûter", mastery: 0},
+  {base: "dig", past: "dug", pp: "dug", fr: "creuser", mastery: 0},
+  {base: "feed", past: "fed", pp: "fed", fr: "nourrir", mastery: 0},
+  {base: "ride", past: "rode", pp: "ridden", fr: "monter (vélo/cheval)", mastery: 0},
+  {base: "seek", past: "sought", pp: "sought", fr: "chercher", mastery: 0},
+  {base: "smell", past: "smelt/smelled", pp: "smelt/smelled", fr: "sentir", mastery: 0},
+  {base: "spell", past: "spelt/spelled", pp: "spelt/spelled", fr: "épeler", mastery: 0},
+  {base: "spill", past: "spilt/spilled", pp: "spilt/spilled", fr: "renverser", mastery: 0},
+  {base: "split", past: "split", pp: "split", fr: "fendre", mastery: 0},
+  {base: "spread", past: "spread", pp: "spread", fr: "étaler", mastery: 0},
+  {base: "spring", past: "sprang", pp: "sprung", fr: "sauter", mastery: 0},
+  {base: "sting", past: "stung", pp: "stung", fr: "piquer", mastery: 0},
+  {base: "swing", past: "swung", pp: "swung", fr: "se balancer", mastery: 0},
+  {base: "weep", past: "wept", pp: "wept", fr: "pleurer", mastery: 0},
+  {base: "wind", past: "wound", pp: "wound", fr: "enrouler", mastery: 0},
+  {base: "hang", past: "hung", pp: "hung", fr: "suspendre", mastery: 0},
+  {base: "light", past: "lit", pp: "lit", fr: "allumer", mastery: 0},
+  
+  // 101-150 (verbes supplémentaires utiles)
+  {base: "awake", past: "awoke", pp: "awoken", fr: "se réveiller", mastery: 0},
+  {base: "bear", past: "bore", pp: "borne", fr: "supporter", mastery: 0},
+  {base: "beat", past: "beat", pp: "beaten", fr: "battre", mastery: 0},
+  {base: "bend", past: "bent", pp: "bent", fr: "plier", mastery: 0},
+  {base: "bind", past: "bound", pp: "bound", fr: "lier", mastery: 0},
+  {base: "bleed", past: "bled", pp: "bled", fr: "saigner", mastery: 0},
+  {base: "breed", past: "bred", pp: "bred", fr: "élever", mastery: 0},
+  {base: "burst", past: "burst", pp: "burst", fr: "éclater", mastery: 0},
+  {base: "cast", past: "cast", pp: "cast", fr: "jeter", mastery: 0},
+  {base: "cling", past: "clung", pp: "clung", fr: "s'accrocher", mastery: 0},
+  {base: "creep", past: "crept", pp: "crept", fr: "ramper", mastery: 0},
+  {base: "deal", past: "dealt", pp: "dealt", fr: "traiter", mastery: 0},
+  {base: "dream", past: "dreamt", pp: "dreamt", fr: "rêver", mastery: 0},
+  {base: "dwell", past: "dwelt", pp: "dwelt", fr: "habiter", mastery: 0},
+  {base: "forbid", past: "forbade", pp: "forbidden", fr: "interdire", mastery: 0},
+  {base: "freeze", past: "froze", pp: "frozen", fr: "geler", mastery: 0},
+  {base: "grind", past: "ground", pp: "ground", fr: "moudre", mastery: 0},
+  {base: "kneel", past: "knelt", pp: "knelt", fr: "s'agenouiller", mastery: 0},
+  {base: "leap", past: "leapt", pp: "leapt", fr: "sauter", mastery: 0},
+  {base: "learn", past: "learnt", pp: "learnt", fr: "apprendre", mastery: 0},
+  {base: "mistake", past: "mistook", pp: "mistaken", fr: "se tromper", mastery: 0},
+  {base: "overcome", past: "overcame", pp: "overcome", fr: "surmonter", mastery: 0},
+  {base: "prove", past: "proved", pp: "proven", fr: "prouver", mastery: 0},
+  {base: "quit", past: "quit", pp: "quit", fr: "arrêter", mastery: 0},
+  {base: "shrink", past: "shrank", pp: "shrunk", fr: "rétrécir", mastery: 0},
+  {base: "sink", past: "sank", pp: "sunk", fr: "couler", mastery: 0},
+  {base: "slide", past: "slid", pp: "slid", fr: "glisser", mastery: 0},
+  {base: "spin", past: "spun", pp: "spun", fr: "tourner", mastery: 0},
+  {base: "spit", past: "spat", pp: "spat", fr: "cracher", mastery: 0},
+  {base: "spoil", past: "spoilt", pp: "spoilt", fr: "gâter", mastery: 0},
+  {base: "stink", past: "stank", pp: "stunk", fr: "puer", mastery: 0},
+  {base: "strive", past: "strove", pp: "striven", fr: "s'efforcer", mastery: 0},
+  {base: "swear", past: "swore", pp: "sworn", fr: "jurer", mastery: 0},
+  {base: "thrust", past: "thrust", pp: "thrust", fr: "enfoncer", mastery: 0},
+  {base: "wring", past: "wrung", pp: "wrung", fr: "tordre", mastery: 0},
+  {base: "arise", past: "arose", pp: "arisen", fr: "survenir", mastery: 0},
+  {base: "forgive", past: "forgave", pp: "forgiven", fr: "pardonner", mastery: 0}
 ];
 
 let currentScore = parseInt(localStorage.getItem('verbScore')) || 0;
@@ -71,7 +154,7 @@ let currentStreak = 0;
 let currentVerb = null;
 let bestStreak = parseInt(localStorage.getItem('bestStreak')) || 0;
 
-// Variables pour le module Matching
+// Variables globales pour le module de Matching
 let selectedBaseItem = null;
 let selectedFrItem = null;
 let matchingPairsLeft = 0;
@@ -180,9 +263,9 @@ function startQuiz() {
 
 function checkQuiz(btn, selected, correct) {
   const isCorrect = selected === correct;
-  btn.style.background = isCorrect ? 'var(--success)' : 'var(--error)';
+  btn.style.background = isCorrect ? '#10b981' : '#ef4444';
   btn.style.color = 'white';
-  btn.style.borderColor = isCorrect ? 'var(--success)' : 'var(--error)';
+  btn.style.borderColor = isCorrect ? '#10b981' : '#ef4444';
 
   updateMastery(currentVerb.base, isCorrect);
   if (isCorrect) {
@@ -221,9 +304,9 @@ function startAudioQuiz() {
     btn.textContent = opt;
     btn.onclick = () => {
       const correct = opt === currentVerb.base;
-      btn.style.background = correct ? 'var(--success)' : 'var(--error)';
+      btn.style.background = correct ? '#10b981' : '#ef4444';
       btn.style.color = 'white';
-      btn.style.borderColor = correct ? 'var(--success)' : 'var(--error)';
+      btn.style.borderColor = correct ? '#10b981' : '#ef4444';
       updateMastery(currentVerb.base, correct);
       if (correct) { currentScore += 12; currentStreak++; } else { currentStreak = 0; }
       updateStats();
@@ -239,12 +322,12 @@ function startMatching() {
   selectedBaseItem = null;
   selectedFrItem = null;
 
-  // Sélectionner 5 verbes aléatoires parmi la liste complète des 60
+  // Extraction aléatoire de 5 verbes parmi la liste globale des 150 verbes disponibles
   const shuffledVerbs = [...verbs].sort(() => Math.random() - 0.5);
   const selectedVerbs = shuffledVerbs.slice(0, 5);
   matchingPairsLeft = selectedVerbs.length;
 
-  // Extraire les données et mélanger indépendamment les deux listes
+  // Création et mélange dissocié des deux colonnes (anglais et français)
   const bases = selectedVerbs.map(v => ({ text: v.base, id: v.base }));
   const frs = selectedVerbs.map(v => ({ text: v.fr, id: v.base }));
 
@@ -261,7 +344,7 @@ function startMatching() {
   const basesCol = document.getElementById('matchingBases');
   const frsCol = document.getElementById('matchingFrs');
 
-  // Injecter la colonne gauche (Bases Verbales)
+  // Remplissage de la colonne gauche (Verbe en anglais)
   bases.forEach(b => {
     const div = document.createElement('div');
     div.className = 'matching-item';
@@ -271,7 +354,7 @@ function startMatching() {
     basesCol.appendChild(div);
   });
 
-  // Injecter la colonne droite (Traductions Françaises)
+  // Remplissage de la colonne droite (Signification en français)
   frs.forEach(f => {
     const div = document.createElement('div');
     div.className = 'matching-item';
@@ -295,13 +378,13 @@ function selectMatchingItem(element, type) {
     selectedFrItem.classList.add('selected');
   }
 
-  // Vérification de l'association si les deux éléments sont sélectionnés
+  // Vérification si deux éléments distincts sont sélectionnés
   if (selectedBaseItem && selectedFrItem) {
     const baseId = selectedBaseItem.dataset.id;
     const frId = selectedFrItem.dataset.id;
 
     if (baseId === frId) {
-      // Succès
+      // Succès : Association correcte
       selectedBaseItem.className = 'matching-item matched';
       selectedFrItem.className = 'matching-item matched';
       
@@ -314,13 +397,13 @@ function selectMatchingItem(element, type) {
       selectedFrItem = null;
       matchingPairsLeft--;
 
-      // Fin du tableau (Toutes les paires trouvées)
+      // Victoire totale sur le plateau de jeu en cours
       if (matchingPairsLeft === 0) {
         setTimeout(() => {
           document.getElementById('matchingContent').innerHTML = `
             <div class="status-message">
-              🎉 Bravo ! Toutes les paires ont été correctement associées.<br>
-              <strong>+25 points bonus de fin de partie !</strong>
+              🎉 Bravo ! Toutes les paires ont été correctement reliées.<br>
+              <strong>+25 points bonus ajoutés !</strong>
             </div>`;
           currentScore += 25;
           updateStats();
@@ -328,7 +411,7 @@ function selectMatchingItem(element, type) {
         }, 1000);
       }
     } else {
-      // Erreur
+      // Erreur : Mauvaise association
       const item1 = selectedBaseItem;
       const item2 = selectedFrItem;
       
@@ -342,7 +425,7 @@ function selectMatchingItem(element, type) {
       selectedBaseItem = null;
       selectedFrItem = null;
 
-      // Réinitialiser visuellement les boutons après 1 seconde
+      // Retrait temporisé de la couleur d'erreur pour rejouer
       setTimeout(() => {
         if (item1.className.includes('error')) item1.className = 'matching-item';
         if (item2.className.includes('error')) item2.className = 'matching-item';
@@ -409,7 +492,7 @@ window.onload = () => {
 
   updateStats();
   showSection('list');
-  document.getElementById('versionTitle').textContent = "Module standard (60 verbes)";
+  document.getElementById('versionTitle').textContent = "Module standard (150 verbes)";
 
   // Dark mode toggle
   document.getElementById('themeToggle').addEventListener('click', () => {
